@@ -1,0 +1,30 @@
+name: 能力缺口
+description: 多个业务仓都要用、但已发布包还没有的通用能力
+title: "[能力] "
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: why
+    attributes:
+      label: 为什么是框架能力
+      description: 至少两个业务场景，或说明为何不能停在业务仓。
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: 主要落在哪一端
+      options:
+        - 后端
+        - Web
+        - 移动端
+        - 跨端
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 期望的公开面
+      description: 坐标、API、模块名都可以。不要贴业务私有规则。
+    validations:
+      required: true

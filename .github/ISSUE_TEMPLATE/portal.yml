@@ -1,0 +1,12 @@
+name: 门户文案
+description: wu9007.github.io 写错、过期或漏了采用信息
+title: "[门户] "
+labels: ["type:docs"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 哪一段不对
+      description: 页面 URL 和应改成什么。
+    validations:
+      required: true

@@ -1,0 +1,38 @@
+name: 采用反馈
+description: 业务仓已验证并采用某个 Brick 版本，申请登记
+title: "Brick 采用反馈："
+labels: ["type:adoption"]
+body:
+  - type: input
+    id: code
+    attributes:
+      label: 业务系统编码
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: 业务仓库
+      placeholder: https://github.com/org/app
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 已采用 Brick 版本
+      placeholder: 2.0.0-6
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: 业务仓采用提交
+    validations:
+      required: true
+  - type: textarea
+    id: verify
+    attributes:
+      label: 验证结果
+      description: 跑过的命令和结论。不要贴密钥。
+    validations:
+      required: true

@@ -1,0 +1,50 @@
+name: 已发布包缺陷
+description: Maven Central 或 npmjs 上某个已发布版本行为不对
+title: "[缺陷] "
+labels: ["type:bug", "priority:p1"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 已发布版本
+      description: 例如 2.0.0-6
+      placeholder: 2.0.0-6
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: 坐标面
+      options:
+        - 后端 Maven io.github.wu9007:brick-*
+        - 前端 npm @wildbuck/*
+        - 两端都有
+    validations:
+      required: true
+  - type: input
+    id: gav
+    attributes:
+      label: 包名
+      description: GAV 或 npm 包名
+      placeholder: io.github.wu9007:brick-starter-application 或 @wildbuck/module-iam-frontend
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 复现
+      description: 不要贴密钥、连接串、业务数据明文。
+    validations:
+      required: true

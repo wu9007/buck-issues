@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 产品门户
+    url: https://wu9007.github.io
+    about: 采用方式、Maven / npm / Flutter 坐标
+  - name: Flutter 内核 issue
+    url: https://github.com/wu9007/Buck/issues
+    about: 移动端包 buck 的实现问题，不是已发布 Java/Web 坐标
